@@ -7,7 +7,7 @@ args <- commandArgs(trailingOnly = TRUE)
 input_file <- if (length(args) >= 1) args[1] else "example_input.csv"
 output_file <- if (length(args) >= 2) args[2] else "output/cross_reactive_alleles.txt"
 
-hla <- read.csv("Book12.csv", stringsAsFactors = FALSE, check.names = TRUE)
+hla <- read.csv("example_input.csv", stringsAsFactors = FALSE, check.names = TRUE)
 
 required_columns <- c("Probe.1", "Probe.2", "Probe.3")
 missing_columns <- setdiff(required_columns, names(hla))
